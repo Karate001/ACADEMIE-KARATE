@@ -1,0 +1,376 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width,initial-scale=1">
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <title>Académie Karaté Cobra</title>
+        <style>
+            body{
+                display: block;
+            }
+            header{
+                display: flex;
+                background-color: black;
+                color: white;
+                height: 100px; 
+                width: 100%;
+                position: absolute;
+                left: 0;right: 0;
+            }
+            .logo{
+                height: 40px;
+                width: 5%;
+                margin-right: 0;
+                margin-top: 10px;
+                margin-left: 1%;
+            }
+            .Titre_Du_Header{
+                font-family: Arial, Helvetica, sans-serif;
+                font-size: 15px;
+                font-weight: 900;
+                color: yellow;
+                width: 15%;
+                margin-left: 0px;
+            }
+            .ul_Du_Header{
+                display: flex;
+                font-weight: 600;
+                font-family: Arial, Helvetica, sans-serif;
+                width: 50%;
+                padding: 0 0 0 0;
+                text-align: center;
+            }
+            .li_Header{
+                width: 33.3%;
+                margin: 0 0 0 60px;
+            }
+            .Recherche_Input{
+
+                width: 20%;
+                margin: auto 0 auto auto;
+                right: 0;
+                border: solid black;
+                background-color: black;
+            }
+            .RechercheButton{
+                border: none;
+                background-color: white;
+                cursor: pointer;
+            }
+            .ChampRecherche{
+                position: relative;
+                right: 0;
+                width: 75%;
+                height: 100%;
+                border: none;
+            }
+            .background{
+                background-image: url('IMG-20240109-WA0005.jpg');
+                background-size: cover;
+                height: 700px;
+                width: 100%;
+            }
+            .title{
+                color: black;
+                font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+                font-size: 60px;
+                font-weight: 800;
+                text-align: center;
+                margin: top 0;
+                position: absolute;
+                top: 30%;
+                left: 5%;
+            }
+            .underTitle_background{
+                font-size: 20px;margin-top: 30px;border:solid black;
+                width: 400px;color: yellow;
+                background-color: rgba(0, 0, 255, 0.5);
+                font-weight: 900;
+                border-width: 10px;
+                left: 5%;
+                filter: brightness(120%);
+            }
+            .image1{
+                height: 500px;
+                width: 300px ;
+                margin-top: 25px;
+                margin-left: 50px;
+            }
+            ::placeholder{
+                font-weight: 800;
+                color: black;
+            }
+            .presentation{display: block;}
+            .page2{
+                display: flex;
+                position: relative;
+                left: 20%;
+            }
+            .container_text{
+                display: block;
+                height: 500px;
+                width: 350px;
+                background-color: darkgoldenrod;
+                margin-top: 25px;
+            }
+            .title2{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: white;
+                font-size: 30px;
+                width: 300px;
+                margin-left: 20px;
+                margin-top: 30px;
+            }
+            .text{
+                margin-top: 30px;
+                margin-left: 20px;
+                display: inline-block;
+                font-size: small;
+            }
+            .Devise_Principe{
+                display: block;
+                width: 75%;
+                border-width: 5px;
+                border: solid black;
+                text-align: center;
+                margin-left: 5%;
+                margin-top: 15px;
+                background-color: hsl(60, 100%, 85%);
+            }
+            .Title_Devise{
+                border-bottom: solid black;
+                border-width: 5px;
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: black;
+                font-size: 30px;
+            }
+            .Devise_Principe p{
+                font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+                color: black;
+                font-size: 22px;
+            }
+            .Notre_Equipe{
+                display: block;
+            }
+            .Notre_Equipe_Titre{
+                background-color: black;
+                color: rgba(255, 255, 0, 0.76);
+                text-align: center;
+                height: 100px;
+                width: 75%;
+                font-size: 100%;
+                font-weight: 600;
+                margin-left: 5%;
+                margin-top: 3%;
+
+            }
+            .Equipe_image_Texte{
+                display: flex;
+                width: 70%;
+                margin-left: 7.5%;
+                gap: 1%;
+            }
+            .Equipe_image img{
+                width: 100%;
+                border: solid black;
+                border-width: 5px;
+                height: 300px;
+                margin-top: -30px;
+            }
+            .Equipe_image h3{
+                border-bottom: solid black;
+                border-width: 5px;
+                border-inline: solid black;
+                border-inline-width: 5px;
+                height: 150px;
+                margin: 0;
+                font-weight: 600;
+                background-color: rgba(255, 255, 0, 0.76);
+                text-align: center;
+                font-size: 100%;
+            }
+            .Equipe_image p{
+                border-bottom: solid black;
+                border-width: 5px;
+                border-inline: solid black;
+                border-inline-width: 5px;
+                height: 200px;
+                margin-top: 0%;
+                text-align: center;
+                font-size: 65%;
+                font-weight: 600;
+            }
+            .Contact{
+                width: 100%;height: 180px;text-align: left;background-color: yellow;font-weight: 800;
+            }
+            .Titre_Contact{
+                font-family: 'Times New Roman', Times, serif;font-size: 50px;font-weight: 800;
+            }
+            @media screen and (max-width: 872px) {
+                header{
+                    width: 100%;
+                }
+                .ul_Du_Header{
+                    height: 80%;
+                }
+                .Recherche_Input{
+                    width: 40%;
+                    height: 60%;
+                }
+                .ChampRecherche{
+                    display: none;
+                    width: 80%;
+                    height: 50%;
+                }
+                .RechercheButton{
+                    height: 100%;
+                    width: 100%;
+                    background-color: black;
+                    color: white;
+                    font-size: 15px;
+                }
+                .RechercheButton i {
+                    font-size: 40px;
+                    position: relative;
+                    left: 40%;
+                }
+                .page2{
+                    position: relative;
+                    left: 0;
+                }
+            }
+            @media screen and (max-width: 700px) {
+                .ul_Du_Header{
+                    display: block;
+                }
+                .background{
+                    background-image: none;
+                    background-color: rgba(128, 128, 128, 0.5);;
+                    
+                }
+                .image1{
+                    width: 50%;
+                    margin-left: 0;
+                }
+                .container_text{
+                    width: 50%;
+                }
+                .title2{
+                    font-size: xx-small;
+                    width: auto; 
+                }
+                .text{
+                    font-size: xx-small;
+                }
+                .Equipe_image_Texte{
+                    display: block;
+                }
+                .Equipe_image p{
+                    font-size: 70%;
+                }
+                .Equipe_image h3{
+                    font-size: 20px;
+                }
+            }
+            @media screen and (max-width: 564px){
+                .title{
+                    top: 12%;  
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <header id="header">            
+            <img src="cobra-logo-V3_400x400.png" alt="" class="logo">
+            <h1 class="Titre_Du_Header">ACADEMIE KARATE COBRA</h1>
+            <nav class="ul_et_RechercheInput" id="ul_et_RechercheInput">
+                <ul class="ul_Du_Header">
+                    <li class="li_Header"><a href="#presentation">Présentation</a></li>
+                    <li class="li_Header">Nos_cours</li>
+                    <li class="li_Header">contacts</li>
+                </ul>
+            </nav>
+            <div class="Recherche_Input">
+                <input type="text" placeholder="Rechercher..." class="ChampRecherche" required id="ChampRecherche">
+                <button type="submit" class="RechercheButton" id="RechercheButton"><i class="fa fa-search"></i></button>
+            </div>
+        </header>
+        <div class="background">
+           <div class="title"> 
+                <div class="title_background">ACADEMIE KARATE COBRA DE BENI </div>
+                <div class="underTitle_background"> Inscrivez vous et réjoignez notre 
+                prochaine séance d'entrainement
+                    </div>
+                </div>
+        </div>
+        <div id="presentation" class="presentation">
+            <div class="page2" >
+                <img src="IMG_3868.JPG" alt="" class="image1">
+                <div class="container_text">
+                    <div class="title2">À PROPOS DE NOTRE ACADEMIE DE KARATE </div>
+                    <div class="text">Un centre de formation et d'apprentissage de Karaté et des Art-Martiaux ; L'Académie de Karaté Cobra de Beni 
+                    a été créé dans la ville de Beni en 2012 par le Grand maître MUZALIWA Bita centure noir 4e Dan (YODAN). La 
+                    ville de Beni étant situé dans la partie Est de la RDC, une région en proie à l'insécurité et à multiples 
+                    attaques criminelles et autres, Le Grand maître MUZALIWA Bita fut inspiré de créer un centre d'apprentissage 
+                    de Karaté et d'Art-Martiaux dans le but d'aider la population surtout les jeunes et enfants de se doter de 
+                    capacité pour se défendre et peut-être sauvé des vie en cas de danger.
+                    Notre centre offre des cours de karaté et d'arts martiaux pour tous les âges et niveaux. Rejoignez-nous pour développer vos compétences et votre confiance !</div> 
+                </div>
+            </div>
+            <div class="Devise_Principe">
+                <h2 class="Title_Devise">DEVISE ET PRINCIPES DE NOTRE ACADEMIE DE KARATE</h2>
+                <p class="Devise"> Vitesse Puissance Précision </p>
+                <p class="Principes"> Ecole de la Maîtrise de sois Et de la Perfection de Caractère </p>
+            </div>
+            <div class="Notre_Equipe">
+                <div class="Notre_Equipe_Titre">RENCONTREZ NOTRE EQUIPE</div>
+                <div class="Equipe_image_Texte">
+                    <div class="Equipe_image"> <img src="IMG-20250202-WA0019-EDIT.jpg" alt=""> 
+                        <h3 class="Nom_image">Muzaliwa Bita <br>Créateur ,Directeur Technique et Instructeur Principal</h3>
+                        <p class="Texte_image_Equipe">Ceinture noire 3e dan (Sandan) ayant connu un grand succès en tant qu'athlète et
+                         accumulé beaucoup d'expériences en tant que coach et instructeur;Sensei Muzaliwa a formé plusieurs 
+                         athlètes actuellement médaillés d'or du championnat d'Afrique de 
+                         Karaté Région Centre avec l'equipe nationale Léopard de la RDC  </p>
+                    </div>
+                    <div class="Equipe_image"> <img src="IMG-20240617-WA0016~2.jpg" alt=""> 
+                        <h3 class="Nom_image">Eustache Muzaliwa<br>Vice-Instructeur</h3>
+                        <p class="Texte_image_Equipe">Deux fois médaillé d'or au championnat d'Afrique de Karaté Région Centre avec l'équipe nationale de Karaté de la RDC(Léopard Karaté) et 
+                        plusieurs fois champion du Congo;Sensei Eustache a beaucoup d'expérience en matière apprentissage de plusieurs 
+                        Arts-Martiaux notamment le Karaté,le Judo,le Jiujiustu et Self-Defense lui qui est pratique les 
+                        Arts-Martiaux depuis l'âge de 2 ans. </p>
+                    </div>
+                    <div class="Equipe_image"> <img src="IMG-20250202-WA0016.jpg" alt="" > 
+                        <h3 class="Nom_image">Stalone Muzaliwa Mulunga<br>Vice-Instructeur</h3>
+                        <p class="Texte_image_Equipe">Médaillé d'or au championnat d'Afrique de Karaté Région Centre en catégorie 
+                        junior et actuellement titulaire en équipe nationale de Karaté de la RDC (Léopard Karaté); Le karaté et les
+                        Arts-Martiaux sont pour lui une passion ce qui lui permet d'instruire tout en inquilquants à nos 
+                        élèves des valeurs morale et surtout l'amour de cet art. </p>
+                    </div>
+                </div>
+            </div>
+            <footer>
+                <div class="Contact">
+                    <div class="Titre_Contact">Contactez-nous</div>
+                    <div class="Contact_Contenue">email:bitamuzaliwa@gmail.com <br>
+                    Number: +243 994 245 245 & +243 974 267 676
+                    </div>
+                </div>
+            </footer>
+        </div>
+    </body>
+    <script>
+        document.getElementById("RechercheButton").addEventListener("click",function (){
+         const ChampRecherche= document.getElementById("ChampRecherche");
+         const ul_et_RechercheInput= document.getElementById('ul_et_RechercheInput');
+             if(ChampRecherche.style.display==='none'|| ChampRecherche.style.display==='' ){
+                 ChampRecherche.style.display='inline-block';
+                 ChampRecherche.focus();
+                 }
+             else{
+                 ChampRecherche.style.display='none';
+                 }
+             })
+     </script>
+</html>
