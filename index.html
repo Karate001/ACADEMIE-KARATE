@@ -321,7 +321,7 @@
                 </div>
             </div>
             <div class="Devise_Principe">
-                <h2 class="Title_Devise">DEVISE ET PRINCIPES DE NOTRE ACADEMIE DE KARATE</h2>
+                <h2 class="Title_Devise" id="Title_Devise">DEVISE ET PRINCIPES DE NOTRE ACADEMIE DE KARATE</h2>
                 <p class="Devise"> Vitesse Puissance Précision </p>
                 <p class="Principes"> Ecole de la Maîtrise de sois Et de la Perfection de Caractère </p>
             </div>
@@ -379,5 +379,27 @@
                  ChampRecherche.style.display='none';
                  }
              })
+             const searchForm = document.getElementById('RechercheButton');
+             const searchInput = document.getElementById('ChampRecherche');
+
+             RechercheButton.addEventListener('submit', function(event) {
+             event.preventDefault(); // Empêcher la soumission par défaut du formulaire
+
+             const searchTerm = searchInput.value;
+
+             // Ici, vous pouvez ajouter votre logique de recherche
+             // Par exemple, rediriger vers une page de résultats de recherche
+             // ou effectuer une recherche en utilisant une API
+             const filteredItems = itemList.querySelectorAll('li'); // Sélectionner tous les éléments <li> dans la liste
+            filteredItems.forEach(item => {
+            const text = item.textContent.toLowerCase();
+            if (text.includes(searchTerm)) {
+            item.style.display = 'block'; // Afficher l'élément s'il correspond à la recherche
+            } else {
+            item.style.display = 'none'; // Masquer l'élément s'il ne correspond pas
+            }
+            });
+             console.log('Recherche pour:', searchTerm); 
+            });
      </script>
 </html>
